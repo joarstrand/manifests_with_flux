@@ -1,3 +1,4 @@
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -5,6 +6,8 @@ metadata:
   namespace: lamanifest
   labels:
     app: hello
+  annotations:
+    fluxcd.io/automated: 'true'
 spec:
   selector:
     matchLabels:
